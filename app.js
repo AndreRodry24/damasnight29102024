@@ -7,8 +7,9 @@ import configSocket from './bot/baileys/configSocket.js';
 import moment from 'moment-timezone';
 import NodeCache from 'node-cache';
 import { handleGroupParticipantsUpdate } from './bot/baileys/avisoadm.js';
-import removerNumEstrangeiros from './bot/baileys/removerNumEstranjeiros.js'; // Alteração aqui
+import removerNumEstrangeiros from './bot/baileys/removerNumEstranjeiros.js';
 import { monitorVideos } from './bot/baileys/videoMonitor.js';
+import { onParticipanteSaiu } from './bot/baileys/usuarioSaiu.js';
 
 // Definindo o fuso horário
 moment.tz.setDefault('America/Sao_Paulo');
@@ -70,11 +71,18 @@ async function connectToWhatsApp() {
         if (events['group-participants.update']) {
             const atualizacao = events['group-participants.update'];
             if (inicializacaoCompleta) {
-                await handleGroupParticipantsUpdate(c, atualizacao, botInfo); // Atualizando com a função apropriada
+                await handleGroupParticipantsUpdate(c, atualizacao, botInfo);
 
                 // Chamar a função para remover números estrangeiros
                 const groupId = atualizacao.id; // Obtém o ID do grupo da atualização
-                await removerNumEstrangeiros(c, groupId); // Chama a função para remover números estrangeiros
+                await removerNumEstrangeiros(c, groupId);
+
+                // Notificar a saída do membro
+                for (const membro of atualizacao.participants) {
+                    if (atualizacao.action === 'remove') {
+                        await onParticipanteSaiu(c, groupId, membro); // Notifica a saída do membro
+                    }
+                }
             } else {
                 eventosEsperando.push({ evento: 'group-participants.update', dados: atualizacao });
             }
