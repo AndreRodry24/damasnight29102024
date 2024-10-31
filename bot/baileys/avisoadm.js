@@ -1,6 +1,7 @@
 // avisoadm.js
 import pkg from '@whiskeysockets/baileys';
 
+const { fetchProfilePictureUrl } = pkg;
 const MessageType = pkg.MessageType || pkg['MessageType'] || pkg.default?.MessageType;
 
 // Array para armazenar mensagens de promoção
@@ -13,14 +14,12 @@ const yourNumber = '558599495181@s.whatsapp.net';
 export async function handleGroupParticipantsUpdate(c, update, botInfo) {
     console.log('Update recebido:', update);
 
-    // Verifica se a ação é uma promoção e se há participantes suficientes
     if (update.action === 'promote' && update.participants.length >= 1) {
         const adminPromoted = update.participants[0];
         const adminWhoPromoted = update.author;
 
-        const message = `✅ O usuário @${adminPromoted.split('@')[0]} foi promovido a administrador por @${adminWhoPromoted.split('@')[0]}.`;
+        const message = `✅ O usuário @${adminPromoted.split('@')[0]} foi promovido a administrador do grupo 👏🍻 *DﾑMﾑS* 💃🔥 *Dﾑ* *NIGӇԵ*💃🎶🍾🍸 por @${adminWhoPromoted.split('@')[0]}.`;
 
-        // Enviar mensagem para o seu número
         await c.sendMessage(yourNumber, {
             text: message,
             mentions: [adminPromoted, adminWhoPromoted],
@@ -45,9 +44,8 @@ export async function handleGroupParticipantsUpdate(c, update, botInfo) {
         const adminDemoted = update.participants[0];
         const adminWhoDemoted = update.author;
 
-        const message = `❌ O usuário @${adminDemoted.split('@')[0]} foi rebaixado de administrador por @${adminWhoDemoted.split('@')[0]}.`;
+        const message = `❌ O usuário @${adminDemoted.split('@')[0]} foi rebaixado de administrador do grupo 👏🍻 *DﾑMﾑS* 💃🔥 *Dﾑ* *NIGӇԵ*💃🎶🍾🍸 por @${adminWhoDemoted.split('@')[0]}.`;
 
-        // Enviar mensagem para o seu número
         await c.sendMessage(yourNumber, {
             text: message,
             mentions: [adminDemoted, adminWhoDemoted],
@@ -55,7 +53,56 @@ export async function handleGroupParticipantsUpdate(c, update, botInfo) {
         });
 
         console.log('Mensagem de rebaixamento enviada:', message);
+    } else if (update.action === 'add' && update.participants.length >= 1) {
+        const userAdded = update.participants[0];
+        const adminWhoAdded = update.author;
+
+        // Obter a foto de perfil do usuário adicionado
+        let profilePic;
+        try {
+            profilePic = await c.profilePictureUrl(userAdded, 'image');
+        } catch (error) {
+            console.log('Erro ao obter a foto de perfil:', error);
+            profilePic = 'default-profile-pic-url'; // URL padrão caso não consiga obter a foto
+        }
+
+        const message = `👋 O usuário @${userAdded.split('@')[0]} foi adicionado ao grupo por @${adminWhoAdded.split('@')[0]}.`;
+
+        // Enviar a foto de perfil com a mensagem
+        await c.sendMessage(yourNumber, {
+            image: { url: profilePic },
+            caption: message,
+            mentions: [userAdded, adminWhoAdded],
+            quoted: null
+        });
+
+        console.log('Notificação de adição enviada:', message);
+    } else if (update.action === 'remove' && update.participants.length >= 1) {
+        const userRemoved = update.participants[0];
+        const adminWhoRemoved = update.author;
+
+        // Obter a foto de perfil do usuário removido
+        let profilePic;
+        try {
+            profilePic = await c.profilePictureUrl(userRemoved, 'image');
+        } catch (error) {
+            console.log('Erro ao obter a foto de perfil:', error);
+            profilePic = 'default-profile-pic-url'; // URL padrão caso não consiga obter a foto
+        }
+
+        const message = `👋 O usuário @${userRemoved.split('@')[0]} foi removido do grupo por @${adminWhoRemoved.split('@')[0]}.`;
+
+        // Enviar a foto de perfil com a mensagem
+        await c.sendMessage(yourNumber, {
+            image: { url: profilePic },
+            caption: message,
+            mentions: [userRemoved, adminWhoRemoved],
+            quoted: null
+        });
+
+        console.log('Notificação de remoção enviada:', message);
     } else {
-        console.log('Ação não é uma promoção ou participantes insuficientes.');
+        console.log('Ação não é uma promoção, rebaixamento, adição ou remoção, ou participantes insuficientes.');
     }
 }
+

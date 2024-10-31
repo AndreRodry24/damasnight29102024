@@ -1,21 +1,14 @@
 
-export const menuPrincipal  = (botInfo)=> { 
-    let {nome_bot, nome_adm, prefixo} = botInfo
+export const menuPrincipal = (botInfo) => { 
+    let { nome_bot, nome_adm, prefixo } = botInfo;
     return `|
 |>----〖 *🤖 ${nome_bot?.trim()}®* 〗
 |
-|>---〖🔎 *MENU PRINCIPAL*〗
+|>---〖🔒 *ACESSO RESTRITO*〗
 |
-|- Digite um dos comandos abaixo:
+|-  Apenas o *DONO DO BOT* pode acessar este menu.
 |
-|- *${prefixo}menu* 0  ❓ Informação
-|- *${prefixo}menu* 1  🖼️ Figurinhas
-|- *${prefixo}menu* 2  ⚒️ Utilidades
-|- *${prefixo}menu* 3  📥 Downloads
-|- *${prefixo}menu* 4  👨‍👩‍👧‍👦 Grupo
-|- *${prefixo}menu* 5  🕹️ Diversão/Jogos
-|
-╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
+╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`;
 }
 
 export const menuFigurinhas = (botInfo)=>{
@@ -339,4 +332,3 @@ export const menuAdmin = (botInfo)=>{
 |
 ╰╼❥ ${nome_bot?.trim()}® by *${nome_adm?.trim()}*`
 }
-

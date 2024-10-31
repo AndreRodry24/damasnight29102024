@@ -34,7 +34,7 @@ export const monitorVideos = async (conn, message) => {
 
     // Verifica se o usuário enviou 3 vídeos
     if (userVideoData[participant].count === 3) {
-        const mentionMessage = `@${participant.split('@')[0]}, você enviou 3 vídeos. Se mandar o quarto, você será removido do grupo, pois o limite é somente 3 por dia. Leia as regras.`;
+        const mentionMessage = `@${participant.split('@')[0]}, você enviou 3 vídeos. Se mandar o quarto, *você será removido do grupo*, pois o limite é somente 3 por dia. *Leia as regras.*`;
         await conn.sendMessage(from, { text: mentionMessage, mentions: [participant] });
     }
 

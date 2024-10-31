@@ -21,7 +21,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}reportar* mensagem - Reporta uma mensagem para a administração do Bot.\n`,
                 msgs: {
                     sucesso: `✅ Obrigado, seu problema foi reportado com sucesso e será analisado pelo dono.`,
-                    erro: '[❗] Não foi possível enviar a mensagem para o dono, pois ele ainda não está cadastrado.',
+                    erro: '⚠️ Não foi possível enviar a mensagem para o dono, pois ele ainda não está cadastrado.',
                     resposta: "[ 🤖 REPORTAR ⚙️]\n\n"+
                     "*Usuário* : {p1}\n"+
                     "*Contato* : http://wa.me/{p2}\n"+
@@ -82,7 +82,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}brasileirao* - Exibe a tabela e a rodada atual do Brasileirão Serie A.\n`+
                 `Ex: *${prefixo}brasileirao* B - Exibe a tabela e a rodada atual do Brasileirão Serie B.\n`,
                 msgs: {
-                    erro_serie: '[❗] A série digitada não é suportada, atualmente são suportados apenas A e B.',
+                    erro_serie: '⚠️ A série digitada não é suportada, atualmente são suportados apenas A e B.',
                     resposta: '⚽ BRASILEIRÃO SERIE {p1} ⚽ \n\n'+
                     'Tabela :\n'+
                     '{p2}\n\n'+
@@ -154,15 +154,15 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: Envie/responda uma *imagem* com *${prefixo}rbg* - Retira o fundo da imagem.\n\n`,
                 msgs: {
-                    invalido: "[❗] Este comando só funciona com IMAGENS.",
-                    espera: "[AGUARDE] 📸 O fundo da imagem está sendo removido.",
+                    invalido: "⚠️ Este comando só funciona com IMAGENS.",
+                    espera: "AGUARDE  📸 O fundo da imagem está sendo removido.",
                 }
             },
             ouvir: {
                 descricao: '',
                 guia: `Ex: Responda um áudio com *${prefixo}ouvir* para transformar em texto.\n`,
                 msgs: {
-                    erro_limite: "[❗] Houve um erro na transcrição, o áudio ultrapassa *1m30s*",
+                    erro_limite: "⚠️ Houve um erro na transcrição, o áudio ultrapassa *1m30s*",
                     sucesso: "🔤 Transcrição de áudio :\n\n"+
                     "-- {p1}"
                 }
@@ -178,7 +178,7 @@ export function comandosInfo(botInfo){
                 `Ex: *${prefixo}audio* reverso - Reverte o audio\n\n`+
                 `*Obs*: Este comando funciona apenas com *AUDIOS*.\n`,
                 msgs: {
-                    erro_conversao: "[❗] Houve um erro na conversão de audio"
+                    erro_conversao: "⚠️ Houve um erro na conversão de audio"
                 }
             },
             traduz: {
@@ -196,7 +196,7 @@ export function comandosInfo(botInfo){
                 `- 🇷🇺 Russo (ru)\n`+
                 `- 🇰🇷 Coreano (ko)\n`,
                 msgs: {
-                    nao_suportado: "[❗] Sem dados do idioma ou idioma não suportado. Atualmente suportamos :\n\n"+
+                    nao_suportado: "⚠️ Sem dados do idioma ou idioma não suportado. Atualmente suportamos :\n\n"+
                     `- 🇧🇷 Português - ${prefixo}traduz pt\n`+
                     `- 🇺🇸 Inglês - ${prefixo}traduz en\n`+
                     `- 🇯🇵 Japonês - ${prefixo}traduz ja\n`+
@@ -223,10 +223,10 @@ export function comandosInfo(botInfo){
                 `- 🇰🇷 Coreano (ko)\n`+
                 `- 🇸🇪 Sueco (sv)\n`,
                 msgs: {
-                    texto_vazio : '[❗] Tu é idiota, cadê o texto do comando?',
-                    texto_longo: '[❗] Texto muito longo.',
-                    erro_audio: "[❗] Houve um erro na criação do áudio",
-                    nao_suportado: "[❗] Sem dados do idioma ou idioma não suportado. Atualmente suportamos :\n\n"+
+                    texto_vazio : '⚠️ Tu é idiota, cadê o texto do comando?',
+                    texto_longo: '⚠️ Texto muito longo.',
+                    erro_audio: "⚠️ Houve um erro na criação do áudio",
+                    nao_suportado: "⚠️ Sem dados do idioma ou idioma não suportado. Atualmente suportamos :\n\n"+
                     `- 🇧🇷 Português - ${prefixo}voz pt\n`+
                     `- 🇺🇸 Inglês - ${prefixo}voz en\n`+
                     `- 🇯🇵 Japonês - ${prefixo}voz ja\n`+
@@ -261,7 +261,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}rastreio* PBXXXXXXXXXXX - Exibe o rastreio da encomenda dos correios que você digitou.\n`,
                 msgs: {
-                    codigo_invalido : '[❗] Código de rastreio deve ter 13 digitos.',
+                    codigo_invalido : '⚠️ Código de rastreio deve ter 13 digitos.',
                     resposta_titulo: "📦📦*RASTREIO*📦📦\n\n",
                     resposta_itens: "Status : {p1}\n"+
                     "Data : {p2}\n"+
@@ -333,7 +333,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}ddd* 21 - Exibe qual estado e região do DDD 21.\n\n`+
                 `Ex: Responda com *${prefixo}ddd* - Exibe qual estado e região do membro respondido.\n`,
                 msgs: {
-                    somente_br: "[❗] Esse comando só é aceito com números brasileiros.",
+                    somente_br: "⚠️ Esse comando só é aceito com números brasileiros.",
                     resposta: "📱 Estado : *{p1}* / Região : *{p2}*"
                 }
             },
@@ -343,7 +343,7 @@ export function comandosInfo(botInfo){
                 `*Obs*: Este comando funciona apenas com *IMAGENS* e deve ser uma *CENA VÁLIDA DE ANIME*, *NÃO* podendo ser imagens com *baixa qualidade*, *wallpappers*, *imagens editadas/recortadas*.\n`,
                 msgs: {
                     espera: "⏳ Estou processando a imagem e pesquisando o anime.",
-                    similaridade: "[❗] Nível de similaridade é muito baixo, certifique se enviar uma cena VÁLIDA de anime (Não funciona com imagens não oficiais, Wallpapers ou imagens recortadas e/ou baixa qualidade).",
+                    similaridade: "⚠️ Nível de similaridade é muito baixo, certifique se enviar uma cena VÁLIDA de anime (Não funciona com imagens não oficiais, Wallpapers ou imagens recortadas e/ou baixa qualidade).",
                     resposta: "〘 Pesquisa de anime 〙\n\n"+
                     "Título: *{p1}*\n"+
                     "Episódio: {p2}\n"+
@@ -376,7 +376,7 @@ export function comandosInfo(botInfo){
                 `Ex: Envie/responda uma *IMAGEM* com *${prefixo}s 1* - Transforma em sticker circular.\n`+
                 `Ex: Envie/responda uma *IMAGEM* com *${prefixo}s 2* - Transforma em sticker sem perder a proporção.\n`,
                 msgs: {
-                    erro_video : '[❗] Envie um video/gif com no máximo 8 segundos.',
+                    erro_video : '⚠️ Envie um video/gif com no máximo 8 segundos.',
                 }
             },
             simg: {
@@ -384,7 +384,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: Responda um sticker com *${prefixo}simg* - Transforma o sticker em imagem.\n\n`+
                 `*Obs*: Este comando funciona apenas com *STICKERS NÃO ANIMADOS*.\n`,
                 msgs: {
-                    erro_sticker: `[❗] Este comando é válido apenas para stickers.`
+                    erro_sticker: `⚠️ Este comando é válido apenas para stickers.`
                 }
             },
             ssf: {
@@ -393,7 +393,7 @@ export function comandosInfo(botInfo){
                 `*Obs*: Este comando funciona apenas com *IMAGENS*.\n`,
                 msgs: {
                     espera: `[AGUARDE] 📸 O fundo da imagem está sendo removido e o sticker será enviado em breve.`,
-                    erro_imagem: `[❗] Este comando é válido apenas para imagens.`
+                    erro_imagem: `⚠️ Este comando é válido apenas para imagens.`
                 }
             },
             emojimix: {
@@ -408,7 +408,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}tps* texto - Transforma o texto que você digitou em sticker.\n`,
                 msgs: {
-                    texto_longo : "[❗] Texto é muito longo, no máximo 30 caracteres. ",
+                    texto_longo : "⚠️ Texto é muito longo, no máximo 30 caracteres. ",
                     espera: "⏳ Em andamento , estou transformando seu texto em sticker."
                 }
             },
@@ -416,7 +416,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}atps* texto - Transforma o texto que você digitou em sticker animado.\n`,
                 msgs: {
-                    texto_longo : "[❗] Texto é muito longo, no máximo 30 caracteres. ",
+                    texto_longo : "⚠️ Texto é muito longo, no máximo 30 caracteres. ",
                     espera: "⏳ Em andamento , estou transformando seu texto em sticker animado."
                 }
             },
@@ -456,7 +456,7 @@ export function comandosInfo(botInfo){
                     '██████         60%\n\n - EITA MAMOU O BONDE',
                     '████████     80%\n\n - JÁ SENTOU EM ALGUEM',
                     '██████████ 100%\n\n - BIXONA ALERTA VERMELHO CUIDADO COM SEUS ORGÃOS SEXUAIS'],
-                    apenas_um: "[❗] Erro: Apenas um membro por vez deve ser mencionado.",
+                    apenas_um: "⚠️ Erro: Apenas um membro por vez deve ser mencionado.",
                     resposta: "🧩 *VIADÔMETRO* - {p1}"
                 }
             },
@@ -472,7 +472,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}roletarussa* - Bane um membro aleatório do grupo.\n\n`+
                 `*Obs*: Comando apenas para administradores, pode banir qualquer um exceto o dono do grupo e o BOT.\n`,
                 msgs: {
-                    sem_membros: "[❗] Não existe membros válidos para participarem da roleta.",
+                    sem_membros: "⚠️ Não existe membros válidos para participarem da roleta.",
                     espera: "🎲 Sorteando uma vítima 🎲",
                     motivo: "Selecionado pela roleta",
                     resposta: "🔫 Você foi o escolhido @{p1}, até a próxima."
@@ -482,7 +482,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}casal* - Escolhe 2 pessoas aleatórias do grupo para formar um casal.\n`,
                 msgs: {
-                    minimo: "[❗] Este comando precisa de no mínimo 2 membros no grupo.",
+                    minimo: "⚠️ Este comando precisa de no mínimo 2 membros no grupo.",
                     resposta: "👩‍❤️‍👨 Está rolando um clima entre @{p1} e @{p2}"
                 }
             },
@@ -506,7 +506,7 @@ export function comandosInfo(botInfo){
                 `Ex: *${prefixo}ppt* papel - Escolhe papel, para jogar pedra, papel ou tesoura.\n\n`+
                 `Ex: *${prefixo}ppt* tesoura - Escolhe tesoura, para jogar pedra, papel ou tesoura.\n`,
                 msgs: {
-                    opcao_erro: "[❗] Você deve escolher entre *pedra*, *papel*  ou *tesoura*",
+                    opcao_erro: "⚠️ Você deve escolher entre *pedra*, *papel*  ou *tesoura*",
                     resposta : {
                         vitoria: "🕹️ *VITÓRIA!* 🕹️\n\n"+
                         "Você escolheu {p1} e o bot escolheu {p2}\n",
@@ -528,7 +528,7 @@ export function comandosInfo(botInfo){
                     '🐃🐃🐃 60%\n\n - CUIDADO : GADO EXPERIENTE, INVADE PV E FALA LINDA EM TODAS FOTOS',
                     '🐃🐃🐃🐃 80%\n\n - ALERTA : GADO MASTER, SÓ APARECE COM MULHER ON',
                     '🐃🐃🐃🐃🐃 100%\n\n - PERIGO : GADO MEGA BLASTER ULTRA PAGA BOLETO DE MULHER QUE TEM NAMORADO'],
-                    apenas_um: "[❗] Erro: Apenas um membro por vez deve ser mencionado.",
+                    apenas_um: "⚠️ Erro: Apenas um membro por vez deve ser mencionado.",
                     resposta: "🧩 *GADÔMETRO* - {p1}"
                 }
             },
@@ -543,7 +543,7 @@ export function comandosInfo(botInfo){
                     '🍺🍺🍺  60%\n\n - TÁ MAMADO E COMEÇANDO A FAZER MERDA',
                     '🍺🍺🍺🍺  80%\n\n - TÁ LOUCÃO NEM CONSEGUE DIFERENCIAR MULHER E HOMEM',
                     '🍺🍺🍺🍺🍺  100%\n\n - ALERTA: ESTÁ FORA DE SI , BEIJANDO MENDIGO E CACHORRO DE RUA'],
-                    apenas_um: "[❗] Erro: Apenas um membro por vez deve ser mencionado.",
+                    apenas_um: "⚠️ Erro: Apenas um membro por vez deve ser mencionado.",
                     resposta: "🧩 *BAFÔMETRO* - {p1}"
                 }
             },
@@ -551,7 +551,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}top5* tema - Exibe uma ranking de 5 membros aleatórios com o tema que você escolher.\n`,
                 msgs: {
-                    erro_membros: "[❗] O grupo deve ter no mínimo 5 membros para usar este comando.",
+                    erro_membros: "⚠️ O grupo deve ter no mínimo 5 membros para usar este comando.",
                     resposta_titulo: "╔══✪〘🏆 TOP 5 {p1} 🏆 〙\n╠\n",
                     resposta_itens: "╠➥ {p1} {p2}° Lugar @{p3}\n"
                 }
@@ -598,11 +598,11 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}play* musica - Faz download de uma música do Youtube e envia como audio.\n`,
                 msgs: {
-                    espera: "[AGUARDE] 🎧 Sua música está sendo baixada e processada.\n\n"+
+                    espera: "👏🍻 *DﾑMﾑS* 💃🔥 *Dﾑ* *NIGӇԵ*💃🎶🍾🍸 \n \n *AGUARDE* ⏳ Estou preparando sua música para você 💃✨🙌.\n\n"+
                     "Titulo: *{p1}*\n"+
                     "Duração: *{p2}*",
-                    limite: "[❗] A música deve ter menos de *5 minutos*",
-                    erro_live: "[❗] Houve um erro de download, o bot não aceita download de lives."
+                    limite: " ⚠️ A *MÚSICA* 🎼 deve ter menos de *5 minutos*⏰",
+                    erro_live: "⚠️ Houve um erro de download."
                 }
             },
             yt: {
@@ -612,8 +612,8 @@ export function comandosInfo(botInfo){
                     espera: "[AGUARDE] 🎥 Seu video está sendo baixado e processado.\n\n"+
                     "Titulo: *{p1}*\n"+
                     "Duração: *{p2}*",
-                    limite: "[❗] O video deve ter menos de *5 minutos*",
-                    erro_live: "[❗] Houve um erro de download, o bot não aceita download de lives."
+                    limite: "⚠️ O *VIDEO* 🎥 deve ter menos de *5 minutos*⏰",
+                    erro_live: "⚠️ Houve um erro de download, o bot não aceita download de lives."
                 }
             },
             fb: {
@@ -623,7 +623,7 @@ export function comandosInfo(botInfo){
                     espera: "[AGUARDE] 🎬 Sua mídia está sendo baixada e processada.\n\n"+
                     "Titulo: *{p1}*\n"+
                     "Duração: *{p2}*",
-                    limite: "[❗] O video deve ter menos de *3 minutos*",
+                    limite: "⚠️ O video deve ter menos de *3 minutos*",
                 }
             },
             ig: {
@@ -653,7 +653,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}img* tema - Envia uma imagem com o tema que você digitar.\n`,
                 msgs: {
-                    erro_imagem: '[❗] Não foi possível obter nenhuma imagem, tente novamente.',
+                    erro_imagem: '⚠️ Não foi possível obter nenhuma imagem, tente novamente.',
                 }
             }
         },
@@ -716,7 +716,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}regras* - Exibe a descrição/regras do grupo\n`,
                 msgs: {
-                    sem_descrição: "[❗] O grupo ainda não tem uma descrição."
+                    sem_descrição: "⚠️ O grupo não tem uma descrição."
                 }
             },
             addlista: {
@@ -725,10 +725,10 @@ export function comandosInfo(botInfo){
                 `Ex: Marque alguém com *${prefixo}addlista* - Adiciona o numero de quem foi marcado a lista negra e bane em seguida.\n\n`+
                 `Ex: *${prefixo}addlista* +55219xxxx-xxxx - Adiciona o número digitado a lista negra do grupo e bane em seguida.\n.`,
                 msgs: {
-                    sucesso: "✅ O número desse usuário foi adicionado á lista negra e será banido do grupo caso ainda esteja aqui.",
-                    bot_erro: "[❗] Calma, você não pode adicionar o BOT a lista negra.",
-                    admin_erro: "[❗] Calma, você não pode adicionar um ADMINISTRADOR a lista negra.",
-                    ja_listado: "[❗] Este usuário já está na lista negra.",
+                    sucesso: "✅ *ADICIONADO Á LISTA NEGRA 📓*.",
+                    bot_erro: "⚠️ Calma, você não pode adicionar o BOT a lista negra.",
+                    admin_erro: "⚠️ Calma, você não pode adicionar um ADMINISTRADOR a lista negra.",
+                    ja_listado: "⚠️ Este usuário já está na lista negra.",
                 }
             },
             remlista: {
@@ -736,7 +736,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}remlista* +55219xxxx-xxxx - Remove o número digitado da lista negra do grupo.\n`,
                 msgs: {
                     sucesso: "✅ O número desse usuário foi removido da lista negra.",
-                    nao_listado: "[❗] Este usuário não está na lista negra.",
+                    nao_listado: "⚠️ Este usuário não está na lista negra.",
                 }
             },
             listanegra: {
@@ -745,7 +745,7 @@ export function comandosInfo(botInfo){
                 msgs: {
                     motivo: "Banido por estar na LISTA NEGRA",
                     lista_vazia: "🤖 Não existe usuários na lista negra deste grupo.",
-                    resposta_titulo: "╔══✪〘❌ Lista Negra 〙✪══\n╠\n",
+                    resposta_titulo: "〘 👮🚫 *LISTA NEGRA* 📓 〙\n╠\n",
                     resposta_itens: "╠➥ +{p1}\n"
                 }
             },
@@ -754,8 +754,8 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}add* 5521xxxxxxxxx - Digite o numero com o código do país para adicionar a pessoa.\n\n`+
                 `Ex: *${prefixo}add* 5521xxxxxxxxx, 5521xxxxxxxxx - Digite os numeros com o código do país (adiciona mais de uma pessoa no grupo).\n`,
                 msgs: {
-                    add_erro: "[❗] O número +{p1} não pode ser adicionado. Provavelmente está com privacidade ativada, já está no grupo ou o grupo não aceita mais membros.",
-                    numero_invalido: "[❗] Houve um erro em adicionar o número {p1}, verifique se o número existe ou tente tirar o 9.",
+                    add_erro: "⚠️ O número +{p1} não pode ser adicionado. Provavelmente está com privacidade ativada, já está no grupo ou o grupo não aceita mais membros.",
+                    numero_invalido: "⚠️ Houve um erro em adicionar o número {p1}, verifique se o número existe ou tente tirar o 9.",
                 }
             },
             ban: {
@@ -763,9 +763,9 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}ban* @membro - Para banir um membro marcando ele.\n\n`+
                 `Ex: Responder alguém com *${prefixo}ban* - Bane a pessoa que você respondeu.\n`,
                 msgs: {
-                    banir_admin: "[❗] O bot não pode banir um administrador",
+                    banir_admin: "⚠️ O bot não pode banir um administrador",
                     motivo: "Banimento manual",
-                    banir_erro: "[❗] Não foi possível banir este membro, provavelmente ele já saiu do grupo."
+                    banir_erro: "⚠️ Não foi possível banir este membro, provavelmente ele já saiu do grupo."
                 }
             },
             promover: {
@@ -773,7 +773,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}promover* @membro - Promove o membro mencionado a *ADMINISTRADOR*.\n\n`+
                 `Ex: Responder com *${prefixo}promover* - Promove o usuário respondido a *ADMINISTRADOR*.\n`,
                 msgs: {
-                    erro_bot: "[❗] O BOT não pode ser promovido por ele mesmo.",
+                    erro_bot: "⚠️ O BOT não pode ser promovido por ele mesmo.",
                     sucesso_usuario: "➥ @{p1} virou *ADMINISTRADOR*.\n",
                     erro_usuario: "➥ @{p1} já é um *ADMINISTRADOR*.\n",
                     resposta: "[👤 PROMOVER MEMBROS 👤]\n\n"+
@@ -785,7 +785,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}rebaixar* @admin - Rebaixa o administrador mencionado a *MEMBRO*.\n\n`+
                 `Ex: Responder com *${prefixo}rebaixar* - Rebaixa o administrador respondido a *MEMBRO*.\n`,
                 msgs: {
-                    erro_bot: "[❗] O BOT não pode ser rebaixado por ele mesmo.",
+                    erro_bot: "⚠️ O BOT não pode ser rebaixado por ele mesmo.",
                     sucesso_usuario: "➥ @{p1} virou *MEMBRO*.\n",
                     erro_usuario: "➥ @{p1} já é um *MEMBRO*.\n",
                     resposta: "[👤 REBAIXAR MEMBROS 👤]\n\n"+
@@ -810,7 +810,7 @@ export function comandosInfo(botInfo){
                     resposta: "〘 🤖 Marquei os *{p1}* membros 〙\n",
                     resposta_motivo: "〘 🤖 Marquei os *{p1}* membros 〙\n\n"+
                     "Mensagem: *{p2}*\n",
-                    sem_membros: "[❗] Não existem membros comuns para serem marcados.\n",
+                    sem_membros: "⚠️ Não existem membros comuns para serem marcados.\n",
                 }
             },
             adms: {
@@ -827,7 +827,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}enquete* tema,opcao1,opcao2,opcao3 - Cria uma enquete com um tema e as opções de voto.\n`,  
                 msgs: {
-                    min_opcao: "[❗] A enquete precisa de no mínimo 2 opçôes",
+                    min_opcao: "⚠️ A enquete precisa de no mínimo 2 opçôes",
                     aberta: "✅ A enquete foi aberta com sucesso",
                 }
             },
@@ -859,7 +859,7 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}rlink* - Redefine o link do grupo.\n`,
                 msgs: {
-                    erro: "[❗] Houve um erro na redefinição de link",
+                    erro: "⚠️ Houve um erro na redefinição de link",
                     sucesso : "✅ Link foi redefinido com sucesso"
                 }
             },
@@ -873,17 +873,17 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}alink* - Liga/desliga o antilink e apaga a mensagem de quem postar qualquer tipo de link.\n`,
                 msgs: {
                     motivo: "Banido pelo ANTI-LINK",
-                    detectou: "🤖 Ei @{p1}, o ANTI-LINK está ativado e um possível link foi detectado na sua mensagem, ela foi apagada por segurança.",
-                    ligado: "✅ O recurso de ANTI-LINK foi ativado com sucesso",
-                    desligado: "✅ O recurso de ANTI-LINK foi desativado com sucesso"
+                    detectou: "@{p1}, detectamos um link na sua mensagem 🔗. Por segurança, ela foi removida. 🚫",
+                    ligado: "✅ ANTI-LINK ativado",
+                    desligado: "⚠️ ANTI-LINK desativado ❌"
                 }
             },
             autosticker: {
                 descricao: '',
                 guia: `Ex: *${prefixo}autosticker* - Liga/desliga a criação automatica de stickers sem precisar de comandos.\n`,
                 msgs: {
-                    ligado: "✅ O recurso de AUTO-STICKER foi ativado com sucesso",
-                    desligado: "✅ O recurso de AUTO-STICKER foi desativado com sucesso"
+                    ligado: "✅ AUTO-STICKER ativado",
+                    desligado: "⚠️ AUTO-STICKER desativado ❌"
                 }
             },
             bv: {
@@ -891,8 +891,8 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}bv*  - Liga/desliga a mensagem de bem-vindo para novos membros.\n\n`+
                 `Ex: *${prefixo}bv* mensagem - Liga a mensagem de bem-vindo com uma mensagem da sua escolha.\n`,
                 msgs: {
-                    ligado: "✅ O recurso de boas vindas foi ativado com sucesso",
-                    desligado: "✅ O recurso de boas vindas foi desativado com sucesso",
+                    ligado: "✅ boas vindas ativado",
+                    desligado: "⚠️ boas vindas desativado ❌",
                     mensagem: "👋 Olá, @{p1}\n"+
                     "Seja bem vindo(a) ao grupo *{p2}*\n\n"+
                     "{p3}"+
@@ -907,8 +907,8 @@ export function comandosInfo(botInfo){
                 `*Obs*: A ativação do anti-fake bane pessoas com DDI do exterior (que não sejam 55 - Brasil).\n`,
                 msgs: {
                     motivo: "Banido pelo ANTI-FAKE",
-                    ligado: "✅ O recurso de ANTI-FAKE foi ativado com sucesso",
-                    desligado: "✅ O recurso de ANTI-FAKE foi desativado com sucesso"
+                    ligado: "✅ ANTI-FAKE ativado",
+                    desligado: "⚠️ ANTI-FAKE desativado"
                 }
             },
             aflood: {
@@ -916,11 +916,11 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}aflood*  - Liga/desliga o anti-flood.\n\n`+
                 `Ex: *${prefixo}aflood* 5 15  - Maxímo de mensagens fica 5 mensagens a cada 15 segundos.\n`,
                 msgs: {
-                    max: "[❗] Escolha um valor entre 5-20 mensagens para o anti-flood.",
-                    intervalo: "[❗] Escolha um valor entre 10-60 segundos para o intervalo do anti-flood.",
+                    max: "⚠️ Escolha um valor entre 5-20 mensagens para o anti-flood.",
+                    intervalo: "⚠️ Escolha um valor entre 10-60 segundos para o intervalo do anti-flood.",
                     motivo: "Banido pelo ANTI-FLOOD",
-                    ligado: "✅ O recurso de ANTI-FLOOD foi ativado para *{p1}* mensagens a cada *{p2}* segundos.",
-                    desligado: "✅ O recurso de ANTI-FLOOD foi desativado com sucesso"
+                    ligado: "✅ ANTI-FLOOD ativado.",
+                    desligado: "⚠️ ANTI-FLOOD desativado ❌"
                 }
             },
             apg: {
@@ -942,9 +942,9 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}topativos* 10 - Marca os 10 membros com mais mensagens do grupo.\n\n`+
                 `*Obs*: Este comando só funciona com o *${prefixo}contador* ativado.\n`,
                 msgs: {
-                    erro_qtd: "[❗] A quantidade de pessoas não é um número válido.",
-                    limite_qtd: "[❗] A quantidade de pessoas deve ser entre 1 e 50",
-                    erro_contador: "[❗] Este comando só funciona quando o contador está ativado.",
+                    erro_qtd: "⚠️ A quantidade de pessoas não é um número válido.",
+                    limite_qtd: "⚠️ A quantidade de pessoas deve ser entre 1 e 50",
+                    erro_contador: "⚠️ Este comando só funciona quando o contador está ativado.",
                     resposta_titulo: "╔══✪〘🏆 TOP {p1} ATIVOS 🏆 〙\n╠\n",
                     resposta_itens: "╠➥ {p1} {p2}° Lugar @{p3} - *{p4}* Msgs\n"
                 }
@@ -963,8 +963,8 @@ export function comandosInfo(botInfo){
                 `Ex: Responder com *${prefixo}atividade* - Mostra a atividade do membro que você respondeu.\n\n`+
                 `*Obs*: Este comando só funciona com o *${prefixo}contador* ativado.\n`,
                 msgs: {
-                    erro_contador: "[❗] Este comando só funciona quando o contador está ativado.",
-                    fora_grupo: "[❗] Não é possível ver a atividade de quem não está no grupo.",
+                    erro_contador: "⚠️ Este comando só funciona quando o contador está ativado.",
+                    fora_grupo: "⚠️ Não é possível ver a atividade de quem não está no grupo.",
                     resposta: "🤖 *Atividade do usuário* 🤖\n\n"+
                     "📱 *Total de mensagens* : {p1}\n"+
                     "═════════════════\n"+
@@ -981,9 +981,9 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}imarcar* 5 - Marca todos os membros com menos de 5 mensagens.\n\n`+
                 `*Obs*: Este comando só funciona com o *${prefixo}contador* ativado.\n`,
                 msgs: {
-                    erro_qtd: "[❗] A quantidade mínima de mensagens não é um número válido.",
-                    limite_qtd: "[❗] A quantidade mínima de mensagens deve ser entre [1-50]",
-                    erro_contador: "[❗] Este comando só funciona quando o contador está ativado.",
+                    erro_qtd: "⚠️ A quantidade mínima de mensagens não é um número válido.",
+                    limite_qtd: "⚠️ A quantidade mínima de mensagens deve ser entre [1-50]",
+                    erro_contador: "⚠️ Este comando só funciona quando o contador está ativado.",
                     sem_inativo: "✅ Não existe membros inativos neste grupo.",
                     resposta_titulo: "╔══✪〘🤖 Marcando todos que tem menos de {p1} mensagens〙\n\n"+
                     "👤 *Membros inativos* : {p2}\n",
@@ -995,9 +995,9 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}ibanir* 10 - Bane todos os membros com menos de 10 mensagens.\n\n`+
                 `*Obs*: Este comando só funciona com o *${prefixo}contador* ativado.\n`,
                 msgs: {
-                    erro_qtd: "[❗] A quantidade mínima de mensagens não é um número válido.",
-                    limite_qtd: "[❗] A quantidade mínima de mensagens deve ser entre 1 e 50",
-                    erro_contador: "[❗] Este comando só funciona quando o contador está ativado.",
+                    erro_qtd: "⚠️ A quantidade mínima de mensagens não é um número válido.",
+                    limite_qtd: "⚠️ A quantidade mínima de mensagens deve ser entre 1 e 50",
+                    erro_contador: "⚠️ Este comando só funciona quando o contador está ativado.",
                     sucesso: "🤖✅ {p1} Membros com menos de {p2} mensagens foram banidos.",
                     sem_inativo: "✅ Não existem membros inativos válidos para serem banidos."
                 }
@@ -1018,7 +1018,7 @@ export function comandosInfo(botInfo){
                         erro : "- Comando *{p1}* não pode ser bloqueado.\n",
                         nao_existe: "- Comando *{p1}* não existe.\n"
                     },
-                    resposta_cmd_bloqueado : "[❗] O comando *{p1}* está temporariamente bloqueado neste grupo pelo administrador."
+                    resposta_cmd_bloqueado : "⚠️ O comando *{p1}* está temporariamente bloqueado neste grupo pelo administrador."
                 }
             },
             dcmd: {
@@ -1053,7 +1053,7 @@ export function comandosInfo(botInfo){
                 `*Obs*: Para ver o número dos grupos é necessário checar no comando *${prefixo}grupos*\n`,
                 msgs: {
                     resposta_admin: "🤖✅ O bot saiu com sucesso do grupo escolhido.",
-                    nao_encontrado: `[❗] Não foi possível sair deste grupo, o grupo não foi encontrado ou o número é inválido. Cheque o comando correto em *${prefixo}grupos*`,
+                    nao_encontrado: `⚠️ Não foi possível sair deste grupo, o grupo não foi encontrado ou o número é inválido. Cheque o comando correto em *${prefixo}grupos*`,
                 }
             },
             pvliberado: {
@@ -1080,7 +1080,7 @@ export function comandosInfo(botInfo){
                         erro: "- Comando *{p1}* não pode ser bloqueado.\n",
                         nao_existe: "- Comando *{p1}* não existe.\n"
                     },
-                    resposta_cmd_bloqueado : "[❗] O comando *{p1}* está indisponível no momento por ordem do administrador, tente novamente mais tarde."
+                    resposta_cmd_bloqueado : "⚠️ O comando *{p1}* está indisponível no momento por ordem do administrador, tente novamente mais tarde."
                 }
             },
             dcmdglobal: {
@@ -1168,8 +1168,8 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}entrargrupo* link - Entra em um grupo por link de convite.\n`,
                 msgs: {
-                    link_invalido: "[❗] Isso não é um link válido 👊🤬",
-                    entrar_erro : "[❗] Houve um erro para entrar nesse grupo, verifique se o link está correto.",
+                    link_invalido: "⚠️ Isso não é um link válido 👊🤬",
+                    entrar_erro : "⚠️ Houve um erro para entrar nesse grupo, verifique se o link está correto.",
                     pendente: "🤖 Não foi possivel entrar neste momento, o grupo provavelmente está com modo para administrador aceitar solicitação.",
                     entrar_sucesso: "🤖✅ Entendido, entrarei em breve no grupo."
                 }
@@ -1219,7 +1219,7 @@ export function comandosInfo(botInfo){
                 `Suporta os seguintes prefixos : *!*  *#*  *.*  ***\n`,
                 msgs: {
                     sucesso: "✅ O prefixo dos comandos foi alterado com sucesso.",
-                    nao_suportado: "[❗] Não suportado como prefixo, são suportados somente : ! # . *"
+                    nao_suportado: "⚠️ Não suportado como prefixo, são suportados somente : ! # . *"
                 }
             },
             autostickerpv: {
@@ -1249,7 +1249,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}listablock* - Exibe a lista de usuários bloqueados pelo bot.\n`,
                 msgs: {
                     resposta_titulo: "🤖 Esse é o total de pessoas bloqueadas \nTotal : {p1}\n",
-                    lista_vazia: "[❗] O bot não tem pessoas bloqueadas.",
+                    lista_vazia: "⚠️ O bot não tem pessoas bloqueadas.",
                     resposta_itens: "➸ +{p1}\n",
                 }
             },
@@ -1259,8 +1259,8 @@ export function comandosInfo(botInfo){
                 `Ex: *${prefixo}bloquear* +55 (xx) xxxxx-xxxx - Para o bot bloquear o número digitado.\n\n`+
                 `Ex: Responder alguém com *${prefixo}bloquear* - Para o bot bloquear o membro que você respondeu.\n`,
                 msgs: {
-                    erro_dono: "[❗] O Usuário +{p1} é dono do BOT, não foi possivel bloquear.",
-                    ja_bloqueado: "[❗] O Usuário +{p1} já está *bloqueado*.",
+                    erro_dono: "⚠️ O Usuário +{p1} é dono do BOT, não foi possivel bloquear.",
+                    ja_bloqueado: "⚠️ O Usuário +{p1} já está *bloqueado*.",
                     sucesso: "✅ O Usuário +{p1} foi *bloqueado* com sucesso"
                 }
             },
@@ -1269,7 +1269,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}usuarios* comum - Mostra todos os usuários do tipo *COMUM*.\n\n`+
                 `*Obs*: Use o *${prefixo}tipos* para ver os tipos disponíveis de usuários.\n`,
                 msgs: {
-                    nao_encontrado: "[❗] Não existem usuários com esse tipo ou você digitou um tipo inválido, confira os tipos disponíveis em "+`*${prefixo}tipos*`,
+                    nao_encontrado: "⚠️ Não existem usuários com esse tipo ou você digitou um tipo inválido, confira os tipos disponíveis em "+`*${prefixo}tipos*`,
                     resposta: {
                         titulo: "👥  USUÁRIOS - {p1} ({p2})\n\n",
                         item: "-> {p1} +{p2} - {p3} cmds\n"
@@ -1280,12 +1280,12 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}novotipo* teste, 🤖 Teste, 50 - Cria um novo tipo usuário com nome *teste*, com titulo (exibição em menus) *🤖 Teste* e com o máximo de *50* comandos diários.\n`,
                 msgs: {
-                    erro_comandos: "[❗] Houve um erro ao criar um novo tipo, a quantidade de comandos diários tem que ser um número e no mínimo 10.",
+                    erro_comandos: "⚠️ Houve um erro ao criar um novo tipo, a quantidade de comandos diários tem que ser um número e no mínimo 10.",
                     sucesso_criacao: "✅ Um novo tipo de usuário foi criado com sucesso.\n"+
                     "- Tipo : {p1}\n"+
                     "- Titulo : {p2}\n"+
                     "- Comandos diários : {p3}\n",
-                    erro_criacao: `[❗] Houve um erro ao criar um novo tipo, verifique se esse tipo já existe em *${prefixo}tipos*`
+                    erro_criacao: `⚠️ Houve um erro ao criar um novo tipo, verifique se esse tipo já existe em *${prefixo}tipos*`
                 }
             },
             deltipo: {
@@ -1293,7 +1293,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}deltipo* vip - Deleta o tipo de usuário *VIP* e move todos os usuários desse tipo para *COMUM*\n`,
                 msgs: {
                     sucesso_remocao: "✅ O tipo *{p1}* foi deletado com sucesso e os usuários desse tipo foram movidos para *COMUM*.",
-                    erro_remocao: `[❗] Houve um erro ao deletar este tipo, verifique se esse tipo existe em *${prefixo}tipos* e se não é do tipo *comum* ou *dono* (que não podem ser deletados).`
+                    erro_remocao: `⚠️ Houve um erro ao deletar este tipo, verifique se esse tipo existe em *${prefixo}tipos* e se não é do tipo *comum* ou *dono* (que não podem ser deletados).`
                 }
             },
             tipotitulo: {
@@ -1301,7 +1301,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}tipotitulo* vip, 🔥VIP Teste - Muda o titulo de exibição do tipo de usuário *VIP* para *🔥 VIP Teste*\n`,
                 msgs: {
                     sucesso: "✅ O tipo *{p1}* teve o título de exibição alterado para *{p2}* com sucesso.",
-                    erro: `[❗] Houve um erro ao alterar o titulo deste tipo, verifique se esse tipo existe em *${prefixo}tipos*.`
+                    erro: `⚠️ Houve um erro ao alterar o titulo deste tipo, verifique se esse tipo existe em *${prefixo}tipos*.`
                 }
             },
             limpartipo: {
@@ -1309,7 +1309,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}limpartipo* premium - Transforma todos os usuários do tipo *PREMIUM* em *COMUM*.\n\n`+
                 `*Obs*: Use o *${prefixo}tipos* para ver os tipos disponíveis de usuários.\n`,
                 msgs: {
-                    erro: "[❗] O tipo de usuário que você inseriu é inválido, verifique os tipos disponíveis em "+`*${prefixo}tipos*`,
+                    erro: "⚠️ O tipo de usuário que você inseriu é inválido, verifique os tipos disponíveis em "+`*${prefixo}tipos*`,
                     sucesso: "✅Todos os usuários do tipo *{p1}* foram convertidos para *COMUM*"
                 }
             },
@@ -1317,10 +1317,10 @@ export function comandosInfo(botInfo){
                 descricao: '',
                 guia: `Ex: *${prefixo}limitediario* - Ativa/desativa o limite diario de comandos.\n`,
                 msgs: {
-                    qtd_invalida: "[❗] A quantidade de comandos por dia está inválida",
+                    qtd_invalida: "⚠️ A quantidade de comandos por dia está inválida",
                     ativado: "✅ O Limite diário de comandos foi ativado com sucesso",
                     desativado: "✅ O Limite diário de comandos foi desativado com sucesso",
-                    resposta_excedeu_limite: "[❗] {p1} -> Você ultrapassou seu limite diário de comandos por dia.\n\n"+
+                    resposta_excedeu_limite: "⚠️ {p1} -> Você ultrapassou seu limite diário de comandos por dia.\n\n"+
                     "Entre em contato com o dono para ver sua situação : https://wa.me/{p2}"
                 }
             },
@@ -1329,11 +1329,11 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}taxacomandos* 5 60 - Ativa a taxa limite de comandos para 5 comandos a cada minuto por usuário, caso o usuário ultrapasse ele fica 60 segundos impossibilitado de fazer comandos.\n\n`+
                 `*Obs*: Digite *${prefixo}taxacomandos* novamente para desativar a taxa limite de comandos.\n`,
                 msgs: {
-                    qtd_invalida: "[❗] A quantidade máxima de mensagens por minuto está inválida",
-                    tempo_invalido: "[❗] O tempo de bloqueio de mensagens está inválido",
+                    qtd_invalida: "⚠️ A quantidade máxima de mensagens por minuto está inválida",
+                    tempo_invalido: "⚠️ O tempo de bloqueio de mensagens está inválido",
                     ativado: "✅ O Limitador de comandos por minuto foi ativado com sucesso",
                     desativado: "✅ O Limitador de comandos por minuto foi desativado com sucesso",
-                    resposta_usuario_limitado: "[❗] Você está impossibilitado de mandar comandos por *{p1}* segundos, pega leve cara."
+                    resposta_usuario_limitado: "⚠️ Você está impossibilitado de mandar comandos por *{p1}* segundos, pega leve cara."
                 }
             },
             desbloquear: {
@@ -1342,7 +1342,7 @@ export function comandosInfo(botInfo){
                 `Ex: *${prefixo}desbloquear* +55 (xx) xxxxx-xxxx - Para o bot desbloquear o número digitado.\n\n`+
                 `Ex: Responder alguém com *${prefixo}desbloquear* - Para o bot desbloquear o membro que você respondeu.\n`,
                 msgs: {
-                    ja_desbloqueado: "[❗] O Usuário +{p1} já está *desbloqueado*.",
+                    ja_desbloqueado: "⚠️ O Usuário +{p1} já está *desbloqueado*.",
                     sucesso: "✅ O Usuário +{p1} foi *desbloqueado* com sucesso"
                 }
             },
@@ -1367,9 +1367,9 @@ export function comandosInfo(botInfo){
                 `*Obs²*: Verifique os tipos disponíveis de usuários em *${prefixo}tipos*.\n`+
                 `*Obs³*: Para ficar sem limite de comandos digite -1 no campo de limite.\n`,
                 msgs: {
-                    invalido: "[❗] O número para definir o limite de comandos é inválido",
-                    tipo_invalido: "[❗] O tipo de usuário que você inseriu é inválido, verifique os tipos disponíveis em "+`*${prefixo}tipos*`,
-                    erro_limite_diario: "[❗] Este comando só pode ser usado com o "+`*${prefixo}limitediario*`+" ativado.",
+                    invalido: "⚠️ O número para definir o limite de comandos é inválido",
+                    tipo_invalido: "⚠️ O tipo de usuário que você inseriu é inválido, verifique os tipos disponíveis em "+`*${prefixo}tipos*`,
+                    erro_limite_diario: "⚠️ Este comando só pode ser usado com o "+`*${prefixo}limitediario*`+" ativado.",
                     sucesso: "✅ O limite diário dos usuários do tipo *{p1}* foi definido para *{p2}* comandos/dia "
                 }
             },
@@ -1380,9 +1380,9 @@ export function comandosInfo(botInfo){
                 `Ex: *${prefixo}usuariotipo* vip  55219xxxxxxxx - Altera o tipo do usuário do número para *VIP*.\n\n`+
                 `*Obs*: Use o *${prefixo}tipos* para ver os tipos disponíveis de usuários.\n`,
                 msgs: {
-                    tipo_dono: "[❗] Não é possivel alterar cargo do dono",
-                    tipo_invalido: `[❗] O tipo de usuário que você inseriu é inválido, verifique se o tipo existe em *${prefixo}tipos* e se não é do tipo *dono*`,
-                    nao_registrado: "[❗] Este usuário ainda não está registrado",
+                    tipo_dono: "⚠️ Não é possivel alterar cargo do dono",
+                    tipo_invalido: `⚠️ O tipo de usuário que você inseriu é inválido, verifique se o tipo existe em *${prefixo}tipos* e se não é do tipo *dono*`,
+                    nao_registrado: "⚠️ Este usuário ainda não está registrado",
                     sucesso: "✅ O tipo desse usuário foi definido para {p1}"
                 }
             },
@@ -1406,8 +1406,8 @@ export function comandosInfo(botInfo){
                 `*Obs*: Para ver o número dos grupos é necessário checar no comando *${prefixo}grupos*\n`,
                 msgs: {
                     resposta: `🤖✅ O link para este grupo atualmente é : {p1}`,
-                    nao_admin: '[❗] Não foi possível obter o link desse grupo, o bot não é administrador deste grupo.',
-                    nao_encontrado: `[❗] Não foi possível obter o link desse grupo, o grupo não foi encontrado ou o número é inválido. Cheque o comando correto em *${prefixo}grupos*`,
+                    nao_admin: '⚠️ Não foi possível obter o link desse grupo, o bot não é administrador deste grupo.',
+                    nao_encontrado: `⚠️ Não foi possível obter o link desse grupo, o grupo não foi encontrado ou o número é inválido. Cheque o comando correto em *${prefixo}grupos*`,
                 }
             },
             tipos: {
@@ -1428,7 +1428,7 @@ export function comandosInfo(botInfo){
                 `*Obs*: O comando de *${prefixo}limitediario* deve estar ativado.\n`,
                 msgs: {
                     sucesso: "✅ Os comandos diários de todos os usuários foram resetados",
-                    erro_limite_diario: "[❗] Este comando só pode ser usado com o "+`*${prefixo}limitediario*`+" ativado."
+                    erro_limite_diario: "⚠️ Este comando só pode ser usado com o "+`*${prefixo}limitediario*`+" ativado."
                 }
             },
             r: {
@@ -1439,8 +1439,8 @@ export function comandosInfo(botInfo){
                 `*Obs*: O comando de *${prefixo}limitediario* deve estar ativado.\n`,
                 msgs: {
                     sucesso: "✅ Os comandos diários desse usuário foram resetados",
-                    nao_registrado: "[❗] Este usuário ainda não está registrado",
-                    erro_limite_diario: `[❗] Este comando só pode ser usado com o *${prefixo}limitediario* ativado.`
+                    nao_registrado: "⚠️ Este usuário ainda não está registrado",
+                    erro_limite_diario: `⚠️ Este comando só pode ser usado com o *${prefixo}limitediario* ativado.`
                 }
             },
             verdados: {
@@ -1449,7 +1449,7 @@ export function comandosInfo(botInfo){
                 `Ex: Responder com *${prefixo}verdados* - Mostra os dados gerais do usuário respondido.\n\n`+
                 `Ex: *${prefixo}verdados* 55219xxxxxxxx - Mostra os dados gerais do usuário com esse número.\n`,
                 msgs: {
-                    nao_registrado: "[❗] Este usuário ainda não está registrado",
+                    nao_registrado: "⚠️ Este usuário ainda não está registrado",
                     resposta_superior: "[🤖*VER DADOS DE USO*🤖]\n\n"+
                     "Nome : *{p1}*\n"+
                     "Tipo de usuário : *{p2}*\n"+
@@ -1500,18 +1500,17 @@ export function comandosInfo(botInfo){
             dono_cadastrado: `✅ Seu número foi cadastrado como DONO, agora você pode utilizar os comandos de ${prefixo}admin`,
             cabecalho_guia: `❔ USO DO COMANDO ❔\n\n`,
             usuario_novo: "[ 🤖 Boas Vindas ao {p1} 🤖]\n\n"+
-            `👋 Olá {p2}, vi que você é um usuário novo para abrir o menu de comandos digite *${prefixo}menu*`,
+             `👋 Olá {p2}, 🚫 Esta é uma área restrita onde não devem entrar membros do grupo 🔒. Seja breve, em que posso ajudar❓`,
             entrada_grupo: "Saudações *{p1}* , se tiverem alguma dúvida só digitar "+`*${prefixo}menu*`,
-            cmd_erro: "[❗] Ops, parece que você usou o comando *{p1}* incorretamente ou não sabe como utilizá-lo. Quer aprender a usar?\n\n Digite :\n  - Ex: *{p2} guia* para ver o guia.",
-            erro_comando_codigo: "[❗] Houve um erro no comando *{p1}*, relate ao administrador ou tente novamente mais tarde.",
-            erro_api : "[❗] Houve um erro no comando *{p1}*.\n\n"+
+            cmd_erro: "⚠️ Ops, parece que você usou o comando *{p1}* incorretamente ou não sabe como utilizá-lo. Quer aprender a usar?\n\n Digite :\n  - Ex: *{p2} guia* para ver o guia.",
+            erro_comando_codigo: "⚠️ Houve um erro no comando *{p1}*, relate ao administrador ou tente novamente mais tarde.",
+            erro_api : "⚠️ Houve um erro no comando *{p1}*.\n\n"+
             "Motivo: *{p2}*\n",
-            resposta_ban : "🤖✅ Entendido, +{p1} será banido.\n\n"+
-            "Motivo : {p2}\n"+
-            "Quem baniu : {p3}",
+            resposta_ban: "+{p1} *BANIDO* \n\n" +
+            " *Motivo:* Por infringir os termos do grupo 🚫\n",
             fila_comando: "⏳ O bot está atendendo muitas pessoas ao mesmo tempo, tenha paciência!\n\n"+
             "Atualmente existem *{p1}* comandos na fila de espera.",
-            visualizacao_unica: "[❗] Por privacidade do grupo não foi possivel usar o seu comando em uma mensagem de visualização única. Este recurso só está disponível em mensagens privadas.",
+            visualizacao_unica: "⚠️ Por privacidade do grupo não foi possivel usar o seu comando em uma mensagem de visualização única. Este recurso só está disponível em mensagens privadas.",
             desconectado:{
                 comando: "A conexão com o WhatsApp foi encerrada pelo comando do Administrador.",
                 falha_grave: "A conexão com o WhatsApp foi encerrada devido a uma falha grave no código.",
@@ -1520,12 +1519,12 @@ export function comandosInfo(botInfo){
                 conexao: "A sua conexão com o WhatsApp foi encerrada, tentando reconectar... Motivo : {p1} - {p2}"
             },
             permissao: {
-                grupo: '[❗] Este comando só pode ser usado em grupos',
-                bot_admin: '[❗] Permita que o BOT tenha permissões administrativas.',
-                banir_admin : '[❗] O Bot não tem permissão para banir um administrador',
-                apenas_admin : '[❗] Apenas administradores podem usar este comando.',
-                apenas_dono_bot: '[❗] Apenas o dono do BOT pode usar este comando',
-                apenas_dono_grupo: '[❗] Apenas o dono do GRUPO pode usar este comando.',
+                grupo: '⚠️ Este comando só pode ser usado em grupos',
+                bot_admin: '⚠️ Permita que o BOT tenha permissões administrativas.',
+                banir_admin : '⚠️ O Bot não tem permissão para banir um administrador',
+                apenas_admin : '⚠️ Apenas administradores podem usar este comando.',
+                apenas_dono_bot: '⚠️ Apenas o dono do BOT pode usar este comando',
+                apenas_dono_grupo: '⚠️ Apenas o dono do GRUPO pode usar este comando.',
             }
         }
     }

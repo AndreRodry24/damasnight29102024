@@ -28,7 +28,7 @@
     "fs-extra": "^9.0.1",
     "jimp": "^0.16.1",
     "link-preview-js": "^3.0.5",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.46",
     "node-cache": "^5.1.2",
     "p-queue": "^8.0.1",
     "pino": "^8.21.0",
