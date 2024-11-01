@@ -1,12 +1,17 @@
 // removerNumEstrangeiros.js
 
-// Função para verificar se um número é brasileiro
+// Função para verificar se um número é brasileiro e de celular válido
 const isBrazilianNumber = (number) => {
     // Remove caracteres não numéricos
     const cleanNumber = number.replace(/\D/g, '');
 
-    // Verifica se o número começa com '55' e tem 13 caracteres (9 dígitos) ou 12 caracteres (8 dígitos)
-    return cleanNumber.startsWith('55') && (cleanNumber.length === 13 || cleanNumber.length === 12);
+    // Verifica se o número é brasileiro e segue o formato válido de celular
+    const isMobile = 
+        (cleanNumber.length === 12 || cleanNumber.length === 13) && 
+        cleanNumber.startsWith('55') && 
+        /^[0-9]+$/.test(cleanNumber);
+
+    return isMobile;
 };
 
 // Função para remover números estrangeiros

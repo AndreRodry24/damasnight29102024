@@ -3704,9 +3704,9 @@ url@0.11.0:
     querystring "0.2.0"
 
 user-agents@^1.1.225, user-agents@^1.1.231:
-  version "1.1.344"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.344.tgz#449480033d1c1bed4c39d0cb175558cbdb27347b"
-  integrity sha512-rotT014UIciz4HhHbp12atgQW7hpcjRaZ8XROZjH7wtgmBisjAo+FzI3nGROK0tPUD2N4UwVrX/2KnHPdnVsng==
+  version "1.1.345"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.1.345.tgz#81b35facc4e5b39386fc8527d0a1201fca30d42c"
+  integrity sha512-JrvZjwMnc6XjqIKULsmTpu5pOn1ePL/XocZx/avm/QBOH/O5lWAGTifO5ljJDL6UrOhgwrQqJjoBph1Hxg2tww==
   dependencies:
     lodash.clonedeep "^4.5.0"
 
