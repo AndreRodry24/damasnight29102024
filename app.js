@@ -1,5 +1,3 @@
-// index.js
-
 import { makeWASocket, useMultiFileAuthState, fetchLatestBaileysVersion } from '@whiskeysockets/baileys';
 import * as eventosSocket from './bot/baileys/eventosSocket.js';
 import { BotControle } from './bot/controles/BotControle.js';
@@ -8,7 +6,7 @@ import configSocket from './bot/baileys/configSocket.js';
 import moment from 'moment-timezone';
 import NodeCache from 'node-cache';
 import { handleGroupParticipantsUpdate } from './bot/baileys/avisoadm.js';
-import removerNumEstrangeiros from './bot/baileys/removerNumEstranjeiros.js';
+import removerNumEstrangeiros from './bot/baileys/removerNumEstrangeiros.js';
 import { monitorVideos } from './bot/baileys/videoMonitor.js';
 import { handleMessage } from './bot/baileys/advertenciaGrupos.js';
 import { mencionarTodos } from './bot/baileys/marcarTodosGrupo.js';
@@ -36,7 +34,6 @@ async function connectToWhatsApp() {
         const botInfo = await bot.obterInformacoesBot();
 
         try {
-            // Atualização na conexão
             if (events['connection.update']) {
                 const update = events['connection.update'];
                 const { connection } = update;
@@ -51,55 +48,41 @@ async function connectToWhatsApp() {
                 }
             }
 
-            // Atualização nas credenciais
             if (events['creds.update']) {
                 await saveCreds();
             }
 
-            // Ao receber novas mensagens
             if (events['messages.upsert']) {
                 const m = events['messages.upsert'];
                 if (inicializacaoCompleta) {
                     await eventosSocket.receberMensagem(c, m, botInfo);
 
-                    for (const mensagem of m.messages) {
-                        await removerCaracteres(c, mensagem);
-                        await handleMessage(c, mensagem);
-                        await mencionarTodos(c, mensagem);
+                    await Promise.all(
+                        m.messages.map(async (mensagem) => {
+                            await removerCaracteres(c, mensagem);
+                            await handleMessage(c, mensagem);
+                            await mencionarTodos(c, mensagem);
 
-                        if (mensagem.message?.videoMessage) {
-                            await monitorVideos(c, mensagem);
-                        }
-                    }
+                            if (mensagem.message?.videoMessage) {
+                                await monitorVideos(c, mensagem);
+                            }
+                        })
+                    );
                 } else {
                     eventosEsperando.push({ evento: 'messages.upsert', dados: m });
                 }
             }
 
-            // Atualização de participantes de grupos
             if (events['group-participants.update']) {
                 const atualizacao = events['group-participants.update'];
                 console.log('Evento de atualização de participantes recebido:', atualizacao);
+
                 if (inicializacaoCompleta) {
                     await handleGroupParticipantsUpdate(c, atualizacao, botInfo);
-                    const { action, participants, id } = atualizacao;
+                    const { id } = atualizacao;
 
-                    // Obter metadados do grupo para encontrar os administradores
-                    const groupMetadata = await c.groupMetadata(id);
-                    const adminList = groupMetadata.participants
-                        .filter(participant => participant.admin)
-                        .map(admin => admin.id);
-
-                    // Notificar administradores sobre as mudanças nos participantes
-                    for (const membro of participants) {
-                        if (action === 'add') {
-                            // Notifique sobre um novo membro adicionado, se necessário
-                        } else if (action === 'remove') {
-                            // Notifique sobre um membro removido, se necessário
-                        } else if (action === 'leave') {
-                            // Notifique sobre um membro que saiu
-                        }
-                    }
+                    // Chamada para remover números estrangeiros do grupo
+                    await removerNumEstrangeiros(c, id);
                 } else {
                     eventosEsperando.push({ evento: 'group-participants.update', dados: atualizacao });
                 }
