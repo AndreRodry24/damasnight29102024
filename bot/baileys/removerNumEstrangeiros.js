@@ -4,7 +4,9 @@
 const isBrazilianNumber = (number) => {
     // Remove caracteres não numéricos
     const cleanNumber = number.replace(/\D/g, '');
-    return cleanNumber.startsWith('55') && (cleanNumber.length === 14 || cleanNumber.length === 13);
+
+    // Verifica se o número começa com '55' e tem 13 caracteres (9 dígitos) ou 12 caracteres (8 dígitos)
+    return cleanNumber.startsWith('55') && (cleanNumber.length === 13 || cleanNumber.length === 12);
 };
 
 // Função para remover números estrangeiros
