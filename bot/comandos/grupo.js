@@ -149,16 +149,16 @@ export const grupo = async(c, mensagemBaileys, botInfo) => {
                 }
                 break
             
-            case "remlista":
+            case "removerfdpdalista":
                 try{
                     if (!usuario_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.apenas_admin , mensagem)
                     if (!bot_admin) return await socket.responderTexto(c, id_chat, comandos_info.outros.permissao.bot_admin, mensagem)
                     if(!args.length) return await socket.responderTexto(c, id_chat, erroComandoMsg(comando, botInfo), mensagem)
                     let dlista_numero = texto_recebido.replace(/\W+/g,"")+"@s.whatsapp.net"
                     let dlista_grupo_lista = await grupos.obterListaNegra(id_grupo)
-                    if(!dlista_grupo_lista.includes(dlista_numero)) return await socket.responderTexto(c, id_chat, comandos_info.grupo.remlista.msgs.nao_listado, mensagem)
+                    if(!dlista_grupo_lista.includes(dlista_numero)) return await socket.responderTexto(c, id_chat, comandos_info.grupo.removerfdpdalista.msgs.nao_listado, mensagem)
                     await grupos.removerUsuarioListaNegra(id_grupo, dlista_numero)
-                    await socket.responderTexto(c, id_chat, comandos_info.grupo.remlista.msgs.sucesso, mensagem)
+                    await socket.responderTexto(c, id_chat, comandos_info.grupo.removerfdpdalista.msgs.sucesso, mensagem)
                 } catch(err){
                     throw err
                 }

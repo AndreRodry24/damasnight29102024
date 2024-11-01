@@ -2,7 +2,7 @@
 export const menuPrincipal = (botInfo) => { 
     let { nome_bot, nome_adm, prefixo } = botInfo;
     return `|
-|>----〖 *🤖 ${nome_bot?.trim()}®* 〗
+|>----〖 🤖 ${nome_bot?.trim()}® 〗
 |
 |>---〖🔒 *ACESSO RESTRITO*〗
 |
@@ -154,7 +154,7 @@ export const menuGrupo = (admin, botInfo)=>{
 |
 |- *${prefixo}listanegra* - Exibe a lista negra do grupo.
 |- *${prefixo}addlista* +55 (21) 9xxxx-xxxx - Adiciona o número na lista negra do grupo.
-|- *${prefixo}remlista* +55 (21) 9xxxx-xxxx - Remove o número na lista negra do grupo.
+|- *${prefixo}removerfdpdalista* +55 (21) 9xxxx-xxxx - Remove o número na lista negra do grupo.
 |
 |--〖🧰 *RECURSOS*〗 
 |

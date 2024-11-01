@@ -731,9 +731,9 @@ export function comandosInfo(botInfo){
                     ja_listado: "⚠️ Este usuário já está na lista negra.",
                 }
             },
-            remlista: {
+            removerfdpdalista: {
                 descricao: '',
-                guia: `Ex: *${prefixo}remlista* +55219xxxx-xxxx - Remove o número digitado da lista negra do grupo.\n`,
+                guia: `Ex: *${prefixo}removerfdpdalista* +55219xxxx-xxxx - Remove o número digitado da lista negra do grupo.\n`,
                 msgs: {
                     sucesso: "✅ O número desse usuário foi removido da lista negra.",
                     nao_listado: "⚠️ Este usuário não está na lista negra.",
@@ -744,7 +744,7 @@ export function comandosInfo(botInfo){
                 guia: `Ex: *${prefixo}listanegra* - Exibe a lista negra do grupo.\n`,
                 msgs: {
                     motivo: "Banido por estar na LISTA NEGRA",
-                    lista_vazia: "🤖 Não existe usuários na lista negra deste grupo.",
+                    lista_vazia: "💀 *Neste grupo, a lista negra repousa em sombras*... *Esperando por novos visitantes*... 🕷️",
                     resposta_titulo: "〘 👮🚫 *LISTA NEGRA* 📓 〙\n╠\n",
                     resposta_itens: "╠➥ +{p1}\n"
                 }
