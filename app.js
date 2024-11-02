@@ -11,6 +11,7 @@ import { monitorVideos } from './bot/baileys/videoMonitor.js';
 import { handleMessage } from './bot/baileys/advertenciaGrupos.js';
 import { mencionarTodos } from './bot/baileys/marcarTodosGrupo.js';
 import { removerCaracteres } from './bot/baileys/removerCaracteres.js';
+import { configurarBoasVindas } from './bot/baileys/boasVindas.js';
 
 // Definindo o fuso horário
 moment.tz.setDefault('America/Sao_Paulo');
@@ -28,6 +29,9 @@ async function connectToWhatsApp() {
 
     // Limpando mensagens armazenadas da sessão anterior
     await new MensagemControle().limparMensagensArmazenadas();
+
+    // Configurar boas-vindas
+    configurarBoasVindas(c); // Chamando a função de boas-vindas
 
     // Escutando novos eventos
     c.ev.process(async (events) => {
